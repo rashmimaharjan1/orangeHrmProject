@@ -1,0 +1,33 @@
+Github Actions setup: 
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - master  # Adjust to your branch name
+  pull_request:
+    branches:
+      - master  # Adjust to your branch name
+
+jobs:
+  cypress-run:
+    runs-on: windows-latest
+    
+    steps:
+      # Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'  # Use the Node.js version required for your project
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run Cypress tests
+      - name: Run Cypress tests
+        run: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
