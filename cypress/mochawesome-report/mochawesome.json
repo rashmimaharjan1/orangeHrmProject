@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-10T05:52:34.257Z",
+    "end": "2024-09-10T05:52:39.146Z",
+    "duration": 4889,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08263bb3-1254-486c-91e0-92ecab0dd369",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fab6db09-e908-4bc8-b37b-0d2e0f39641b",
+          "title": "Validate Login Page using PAGE OBJECT MODEL",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate that user can login with valid inputs using POM",
+              "fullTitle": "Validate Login Page using PAGE OBJECT MODEL Validate that user can login with valid inputs using POM",
+              "timedOut": null,
+              "duration": 4848,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const ln = new _LoginPageUsingVariables.default();\ncy.get('@loginData').then(user => {\n  //access data \n  ln.enterUsername('user.username');\n  ln.enterPassword('user.password');\n});\nln.clickLogin();",
+              "err": {},
+              "uuid": "74b0b5af-a631-406f-bb50-2a050f84145e",
+              "parentUUID": "fab6db09-e908-4bc8-b37b-0d2e0f39641b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "74b0b5af-a631-406f-bb50-2a050f84145e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4848,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
