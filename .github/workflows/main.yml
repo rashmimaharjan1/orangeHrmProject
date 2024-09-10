@@ -1,4 +1,4 @@
-Github Actions setup: 
+
 name: Cypress Tests
 
 on:
